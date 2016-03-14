@@ -1,0 +1,28 @@
+<template name="header">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/dashboard">Sputlytics</a>
+      </div>
+      <div class="collapse navbar-collapse" id="menu-collapse">
+        <ul class="nav navbar-nav">
+          <li class="{{#if isActive 'dashboard'}}active{{/if}}">
+            <a href="/dashboard">Dashboard</a>
+          </li>
+          <li class="{{#if isActive 'content'}}active{{/if}}">
+            <a href="#">Content</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-logout>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
