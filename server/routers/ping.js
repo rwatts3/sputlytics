@@ -12,11 +12,10 @@ Picker.route("/ping", (params, req, res, next) => {
   const query = params.query;
   const ip = headers["x-forwarded-for"];
   const geo = geoip.lookup(ip);
-  const time = +new Date();
   const agent = userAgent(headers["user-agent"]);
   agent.device.type = device.getDeviceType(headers["user-agent"]);
   Visits.insert({
-    ckey: query.k,
+    dkey: query.k,
     rf: req.headers.referer,
     ip: ip,
     geo: {
@@ -27,7 +26,6 @@ Picker.route("/ping", (params, req, res, next) => {
     },
     ua: agent,
     lang: query.l,
-    time: time,
     screen: {
       w: +query.w,
       h: +query.h,

@@ -1,0 +1,43 @@
+<template name="filter">
+  <form class="form-horizontal" data-filter-form>
+    <div class="col-xs-12 col-sm-4">
+      <div class="form-group">
+        <label for="domains" class="control-label col-sm-3">
+          Domains
+        </label>
+        <div class="col-sm-9">
+          <select class="form-control" id="domains">
+            {{#each domains}}
+              <option value="{{_id}}" selected="{{isDomainActive}}">{{domain}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="form-group">
+        <label for="startDate" class="control-label col-sm-6">
+          Start date
+        </label>
+        <div class="col-sm-6">
+          <input id="startDate" value="{{startDate}}" type="text" class="form-control" placeholder="__/__/____">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="form-group">
+        <label for="endDate" class="control-label col-sm-6">
+          End date
+        </label>
+        <div class="col-sm-6">
+          <input id="endDate" value="{{endDate}}" type="text" class="form-control" placeholder="__/__/____">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-2">
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Refresh</button>
+      </div>
+    </div>
+  </form>
+</template>
