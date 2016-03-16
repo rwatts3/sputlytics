@@ -1,4 +1,7 @@
 Meteor.publish("visits", function(domainId, startTime, endTime) {
+  check(domainId, String)
+  check(startTime, Number)
+  check(endTime, Number)
   if (this.userId) {
     const user = Meteor.users.findOne(this.userId, {fields: {domainIds: 1}})
     if (_.contains(user.domainIds, domainId)) {

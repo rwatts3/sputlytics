@@ -10,14 +10,23 @@
     "eslint": "^2.4.0",
     "eslint-plugin-meteor": "^3.2.0"
   },
+  "repository": "git@github.com:sputlytics/sputlytics.git",
+  "license": "MIT",
   "eslintConfig": {
     "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module"
     },
-    "plugins": ["eslint-plugin-meteor"],
+    "plugins": [
+      "eslint-plugin-meteor"
+    ],
+    "extends": ["plugin:meteor/recommended"],
     "rules": {
-      "semi": [2, "never"]
+      "meteor/no-session": "off",
+      "semi": [
+        2,
+        "never"
+      ]
     },
     "env": {
       "meteor": true,

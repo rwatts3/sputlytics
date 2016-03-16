@@ -6,7 +6,7 @@ Template.header.helpers({
 })
 
 Template.header.events({
-  "click a[data-logout]": (e) => {
+  "click a[data-logout]": () => {
     AccountsTemplates.logout()
   }
 })

@@ -1,19 +1,19 @@
 const MAX = 10
 
 Template.dashboard.onCreated(() => {
-  const user = Meteor.subscribe("currentUser")
+  const userSubs = Meteor.subscribe("currentUser")
   Meteor.subscribe("domains")
   Tracker.autorun(() => {
-    if (user.ready()) {
+    if (userSubs.ready()) {
       if (!Session.get("domainId")) {
         Session.set("domainId", _.first(Meteor.user().domainIds))
       }
-      const visits = Meteor.subscribe("visits",
+      const visitsSubs = Meteor.subscribe("visits",
         Session.get("domainId"),
         Session.get("startTime"),
         Session.get("endTime")
       )
-      Session.set("visitsReady", visits.ready())
+      Session.set("visitsReady", visitsSubs.ready())
     }
   })
 })
@@ -37,7 +37,6 @@ Template.dashboard.helpers({
       .reverse()
       .first(MAX)
       .value()
-    
   },
   countries() {
     const visits = Visits.byDateRange(
@@ -54,7 +53,6 @@ Template.dashboard.helpers({
       .reverse()
       .first(MAX)
       .value()
-    
   },
   operationSystems() {
     const visits = Visits.byDateRange(
@@ -71,7 +69,6 @@ Template.dashboard.helpers({
       .reverse()
       .first(MAX)
       .value()
-    
   },
   deviceTypes() {
     const visits = Visits.byDateRange(
@@ -88,6 +85,5 @@ Template.dashboard.helpers({
       .reverse()
       .first(MAX)
       .value()
-    
   }
 })

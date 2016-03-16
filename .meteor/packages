@@ -33,4 +33,4 @@ matb33:collection-hooks
 underscore
 momentjs:moment
 rajit:bootstrap3-datepicker
-jshint
+audit-argument-checks

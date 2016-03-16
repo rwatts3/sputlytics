@@ -32,11 +32,11 @@ Template.filter.helpers({
 })
 
 Template.filter.events({
-  "submit form[data-filter-form]": (e) => {
+  "submit form[data-filter-form]": (event) => {
     e.preventDefault()
-    const domainId = $(e.currentTarget).find("#domains").val()
-    const startDate = $(e.currentTarget).find("#startDate").val()
-    const endDate = $(e.currentTarget).find("#endDate").val()
+    const domainId = $(event.currentTarget).find("#domains").val()
+    const startDate = $(event.currentTarget).find("#startDate").val()
+    const endDate = $(event.currentTarget).find("#endDate").val()
     let startTime = +moment(startDate, "MM/DD/YYYY").startOf("day")
     let endTime = +moment(endDate, "MM/DD/YYYY").endOf("day")
     if (startTime > endTime) {
