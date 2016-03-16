@@ -1,33 +1,33 @@
-const MAX = 10;
+const MAX = 10
 
 Template.dashboard.onCreated(() => {
-  const user = Meteor.subscribe("currentUser");
-  Meteor.subscribe("domains");
+  const user = Meteor.subscribe("currentUser")
+  Meteor.subscribe("domains")
   Tracker.autorun(() => {
     if (user.ready()) {
       if (!Session.get("domainId")) {
-        Session.set("domainId", _.first(Meteor.user().domainIds));
+        Session.set("domainId", _.first(Meteor.user().domainIds))
       }
       const visits = Meteor.subscribe("visits",
         Session.get("domainId"),
         Session.get("startTime"),
         Session.get("endTime")
-      );
-      Session.set("visitsReady", visits.ready());
+      )
+      Session.set("visitsReady", visits.ready())
     }
-  });
-});
+  })
+})
 
 Template.dashboard.helpers({
   visitsReady() {
-    return Session.get("visitsReady");
+    return Session.get("visitsReady")
   },
   browsers() {
     const visits = Visits.byDateRange(
       Session.get("domainId"),
       Session.get("startTime"),
       Session.get("endTime")
-    );
+    )
     return _
       .chain(visits.fetch())
       .map((value) => { return {name: value.ua.browser.name }})
@@ -37,14 +37,14 @@ Template.dashboard.helpers({
       .reverse()
       .first(MAX)
       .value()
-    ;
+    
   },
   countries() {
     const visits = Visits.byDateRange(
       Session.get("domainId"),
       Session.get("startTime"),
       Session.get("endTime")
-    );
+    )
     return _
       .chain(visits.fetch())
       .map((value) => { return {name: value.geo.c }})
@@ -54,14 +54,14 @@ Template.dashboard.helpers({
       .reverse()
       .first(MAX)
       .value()
-    ;
+    
   },
   operationSystems() {
     const visits = Visits.byDateRange(
       Session.get("domainId"),
       Session.get("startTime"),
       Session.get("endTime")
-    );
+    )
     return _
       .chain(visits.fetch())
       .map((value) => { return {name: value.ua.os.name }})
@@ -71,14 +71,14 @@ Template.dashboard.helpers({
       .reverse()
       .first(MAX)
       .value()
-    ;
+    
   },
   deviceTypes() {
     const visits = Visits.byDateRange(
       Session.get("domainId"),
       Session.get("startTime"),
       Session.get("endTime")
-    );
+    )
     return _
       .chain(visits.fetch())
       .map((value) => { return {name: value.ua.device.type }})
@@ -88,6 +88,6 @@ Template.dashboard.helpers({
       .reverse()
       .first(MAX)
       .value()
-    ;
+    
   }
-});
+})

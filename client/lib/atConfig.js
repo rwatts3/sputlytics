@@ -13,7 +13,7 @@ AccountsTemplates.configure({
   homeRoutePath: "/dashboard",
   redirectTimeout: 5000,
   onLogoutHook() {
-    FlowRouter.go("/");
+    FlowRouter.go("/")
   },
   texts: {
     button: {
@@ -25,4 +25,4 @@ AccountsTemplates.configure({
       signUp: "Sputlytics"
     }
   }
-});
+})

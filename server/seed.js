@@ -1,11 +1,11 @@
 Seed = {
   init() {
     if (process.env.NODE_ENV === "development") {
-      console.log("Seeding database...");
-      Domains.remove({});
-      const domainId1 = Domains.insert({domain: "sputlytics.com"});
-      const domainId2 = Domains.insert({domain: "blog.sputlytics.com"});
-      Visits.remove({});
+      console.log("Seeding database...")
+      Domains.remove({})
+      const domainId1 = Domains.insert({domain: "sputlytics.com"})
+      const domainId2 = Domains.insert({domain: "blog.sputlytics.com"})
+      Visits.remove({})
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com",
@@ -20,7 +20,7 @@ Seed = {
         },
         lang: "pt-br",
         screen: { w: 1440, h: 900 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/about",
@@ -35,7 +35,7 @@ Seed = {
         },
         lang: "en-ca",
         screen: { w: 1440, h: 900 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/jobs",
@@ -50,7 +50,7 @@ Seed = {
         },
         lang: "en-uk",
         screen: { w: 768, h: 1280 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/jobs",
@@ -65,7 +65,7 @@ Seed = {
         },
         lang: "en-uk",
         screen: { w: 768, h: 1280 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/jobs",
@@ -80,7 +80,7 @@ Seed = {
         },
         lang: "en-uk",
         screen: { w: 768, h: 1280 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/jobs",
@@ -95,7 +95,7 @@ Seed = {
         },
         lang: "en-uk",
         screen: { w: 768, h: 1280 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/contacts",
@@ -110,7 +110,7 @@ Seed = {
         },
         lang: "en-us",
         screen: { w: 1440, h: 900 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/contacts",
@@ -125,7 +125,7 @@ Seed = {
         },
         lang: "en-us",
         screen: { w: 1440, h: 900 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/contacts",
@@ -140,7 +140,7 @@ Seed = {
         },
         lang: "en-us",
         screen: { w: 1920, h: 1080 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/contacts",
@@ -155,7 +155,7 @@ Seed = {
         },
         lang: "en-us",
         screen: { w: 1440, h: 900 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/contacts",
@@ -170,7 +170,7 @@ Seed = {
         },
         lang: "en-us",
         screen: { w: 1920, h: 1080 }
-      });
+      })
       Visits.insert({
         dkey: domainId1,
         rf: "http://sputlytics.com/contacts",
@@ -185,7 +185,7 @@ Seed = {
         },
         lang: "en-us",
         screen: { w: 1920, h: 1080 }
-      });
+      })
 
 
       Visits.insert({
@@ -202,7 +202,7 @@ Seed = {
         },
         lang: "en-uk",
         screen: { w: 1024, h: 768 }
-      });
+      })
       Visits.insert({
         dkey: domainId2,
         rf: "http://blog.sputlytics.com",
@@ -217,7 +217,7 @@ Seed = {
         },
         lang: "en-uk",
         screen: { w: 1280, h: 800 }
-      });
+      })
       Visits.insert({
         dkey: domainId2,
         rf: "http://blog.sputlytics.com",
@@ -232,13 +232,13 @@ Seed = {
         },
         lang: "en-uk",
         screen: { w: 1024, h: 768 }
-      });
-      Meteor.users.remove({});
-      const userId1 = Accounts.createUser({username: "caio", email: "caio@mail.com", password: "123456"});
-      const userId2 = Accounts.createUser({username: "lucas", email: "lucas@mail.com", password: "123456"});
-      Meteor.users.update(userId1, {$set: {domainIds: [domainId1, domainId2]}});
-      Meteor.users.update(userId2, {$set: {domainIds: [domainId1, domainId2]}});
-      console.log("Seed is done!");
+      })
+      Meteor.users.remove({})
+      const userId1 = Accounts.createUser({username: "caio", email: "caio@mail.com", password: "123456"})
+      const userId2 = Accounts.createUser({username: "lucas", email: "lucas@mail.com", password: "123456"})
+      Meteor.users.update(userId1, {$set: {domainIds: [domainId1, domainId2]}})
+      Meteor.users.update(userId2, {$set: {domainIds: [domainId1, domainId2]}})
+      console.log("Seed is done!")
     }
   }
 }
