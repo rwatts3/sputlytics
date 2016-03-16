@@ -29,8 +29,9 @@ accounts-base
 
 
 npm-container
-matb33:collection-hooks
 underscore
 momentjs:moment
 rajit:bootstrap3-datepicker
-audit-argument-checks
+check
+ejson
+matb33:collection-hooks

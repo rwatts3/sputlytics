@@ -1,8 +1,7 @@
-const MAX = 10
-
 Template.dashboard.onCreated(() => {
   const userSubs = Meteor.subscribe("currentUser")
   Meteor.subscribe("domains")
+  Filter.init()
   Tracker.autorun(() => {
     if (userSubs.ready()) {
       if (!Session.get("domainId")) {
@@ -35,7 +34,7 @@ Template.dashboard.helpers({
       .map((value, key) => { return {name: key, pageviews: value} })
       .sortBy("pageviews")
       .reverse()
-      .first(MAX)
+      .first(Filter.MAX)
       .value()
   },
   countries() {
@@ -51,7 +50,7 @@ Template.dashboard.helpers({
       .map((value, key) => { return {name: key, pageviews: value} })
       .sortBy("pageviews")
       .reverse()
-      .first(MAX)
+      .first(Filter.MAX)
       .value()
   },
   operationSystems() {
@@ -67,7 +66,7 @@ Template.dashboard.helpers({
       .map((value, key) => { return {name: key, pageviews: value} })
       .sortBy("pageviews")
       .reverse()
-      .first(MAX)
+      .first(Filter.MAX)
       .value()
   },
   deviceTypes() {
@@ -83,7 +82,7 @@ Template.dashboard.helpers({
       .map((value, key) => { return {name: key, pageviews: value} })
       .sortBy("pageviews")
       .reverse()
-      .first(MAX)
+      .first(Filter.MAX)
       .value()
   }
 })
