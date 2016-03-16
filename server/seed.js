@@ -8,7 +8,7 @@ Seed = {
       Visits.remove({})
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com",
+        path: "/",
         ip: "100.100.88.25",
         geo: { ll: [-23.960766, -46.396080], c: "BR", ct: "São Vicente", rg: null},
         ua: {
@@ -23,7 +23,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/about",
+        path: "/about",
         ip: "100.100.100.99",
         geo: { ll: [49.282729, -123.120738], c: "CA", ct: "Vancouver", rg: null},
         ua: {
@@ -38,7 +38,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/jobs",
+        path: "/jobs",
         ip: "100.100.100.99",
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
@@ -53,7 +53,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/jobs",
+        path: "/jobs",
         ip: "100.100.100.99",
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
@@ -68,7 +68,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/jobs",
+        path: "/jobs",
         ip: "100.100.100.99",
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
@@ -83,7 +83,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/jobs",
+        path: "/jobs",
         ip: "100.100.100.99",
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
@@ -98,7 +98,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/contacts",
+        path: "/contacts",
         ip: "100.100.100.99",
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
@@ -113,7 +113,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/contacts",
+        path: "/contacts",
         ip: "100.100.100.99",
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
@@ -128,7 +128,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/contacts",
+        path: "/contacts",
         ip: "98.92.191.200",
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
@@ -143,7 +143,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/contacts",
+        path: "/contacts",
         ip: "100.100.100.99",
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
@@ -158,7 +158,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/contacts",
+        path: "/contacts",
         ip: "198.98.22.100",
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
@@ -173,7 +173,7 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId1,
-        rf: "http://sputlytics.com/contacts",
+        path: "/contacts",
         ip: "198.98.22.100",
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
@@ -186,18 +186,16 @@ Seed = {
         lang: "en-us",
         screen: { w: 1920, h: 1080 }
       })
-
-
       Visits.insert({
         dkey: domainId2,
-        rf: "http://blog.sputlytics.com",
+        path: "/",
         ip: "100.100.200.54",
         geo: { ll: [-23.960766, -46.396080], c: "BR", ct: "São Vicente", rg: null},
         ua: {
           browser: { name: "Chrome", version: "48.0.2564.116", major: "48" },
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Windows", version: "10" },
-          device: { model: null, vendor: null, type: "desktop" },
+          device: { model: "S20", vendor: "Samsung", type: "desktop" },
           cpu: { architecture: "amd64" }
         },
         lang: "en-uk",
@@ -205,14 +203,14 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId2,
-        rf: "http://blog.sputlytics.com",
+        path: "/",
         ip: "100.300.300.53",
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
           browser: { name: "Firefox", version: "48.0.2564.116", major: "48" },
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Android", version: "6" },
-          device: { model: null, vendor: null, type: "mobile" },
+          device: { model: "Moto X", vendor: "Motorola", type: "mobile" },
           cpu: { architecture: "amd64" }
         },
         lang: "en-uk",
@@ -220,14 +218,14 @@ Seed = {
       })
       Visits.insert({
         dkey: domainId2,
-        rf: "http://blog.sputlytics.com",
+        path: "/post",
         ip: "255.198.172.99",
         geo: { ll: [51.507351, -0.127758], c: "UK", ct: "London", rg: null},
         ua: {
           browser: { name: "Safari", version: "48.0.2564.116", major: "48" },
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Android", version: "6" },
-          device: { model: null, vendor: null, type: "mobile" },
+          device: { model: "Nexus", vendor: "Asus", type: "mobile" },
           cpu: { architecture: "amd64" }
         },
         lang: "en-uk",

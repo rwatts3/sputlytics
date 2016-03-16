@@ -1,10 +1,19 @@
+const url = Meteor.npmRequire("url")
 const userAgent = Meteor.npmRequire("user-agent-parser")
 const device = Meteor.npmRequire("user-agent-device-mapper")
 const geoip = Meteor.npmRequire("geoip-lite")
 const cors = Meteor.npmRequire("cors")
 const helmet = Meteor.npmRequire("helmet")
 
-Picker.middleware(cors())
+Picker.middleware(cors({
+  origin(origin, done) {
+    const isWhiteListed = !!Domains.find(
+      {domain: origin},
+      {fields: {domains: 1}}
+    ).count()
+    done(null, isWhiteListed)
+  }
+}))
 Picker.middleware(helmet())
 
 Picker.route("/ping", (params, req, res, next) => {
@@ -13,10 +22,11 @@ Picker.route("/ping", (params, req, res, next) => {
   const ip = headers["x-forwarded-for"]
   const geo = geoip.lookup(ip)
   const agent = userAgent(headers["user-agent"])
+  const path = url.parse(req.headers.referer).pathname
   agent.device.type = device.getDeviceType(headers["user-agent"])
   Visits.insert({
     dkey: query.k,
-    rf: req.headers.referer,
+    path: path,
     ip: ip,
     geo: {
       ll: geo.ll,

@@ -14,24 +14,28 @@
               <div class="panel-heading">
                 <h3 class="panel-title">Site content</h3>
               </div>
-            </div>
-            <div class="panel-body">
-              <table class="table table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th>Paths</th>
-                    <th>Pageviews</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {{#each paths}}
+              <div class="panel-body">
+                <table class="table table-striped table-hover">
+                  <thead>
                     <tr>
-                      <td>{{name}}</td>
-                      <td>{{pageviews}}</td>
+                      <th>Page</th>
+                      <th>
+                        <a href="#" data-sort-pageviews>
+                          Pageviews&nbsp;<i class="fa fa-sort-{{pageviewsSortClass}}"></i>
+                        </a>
+                      </th>
                     </tr>
-                  {{/each}}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {{#each pages}}
+                      <tr>
+                        <td>{{page}}</td>
+                        <td>{{pageviews}}</td>
+                      </tr>
+                    {{/each}}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
