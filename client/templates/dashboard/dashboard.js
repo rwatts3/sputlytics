@@ -1,34 +1,15 @@
 Template.dashboard.onCreated(() => {
-  const userSubs = Meteor.subscribe("currentUser")
-  Meteor.subscribe("domains")
   Filter.init()
-  Tracker.autorun(() => {
-    if (userSubs.ready()) {
-      if (!Session.get("domainId")) {
-        Session.set("domainId", _.first(Meteor.user().domainIds))
-      }
-      const visitsSubs = Meteor.subscribe("visits",
-        Session.get("domainId"),
-        Session.get("startTime"),
-        Session.get("endTime")
-      )
-      Session.set("visitsReady", visitsSubs.ready())
-    }
-  })
 })
 
 Template.dashboard.helpers({
-  visitsReady() {
-    return Session.get("visitsReady")
+  isReady() {
+    return Session.get("isReady")
   },
   browsers() {
-    const visits = Visits.byDateRange(
-      Session.get("domainId"),
-      Session.get("startTime"),
-      Session.get("endTime")
-    )
+    const visits = Filter.getVisits()
     return _
-      .chain(visits.fetch())
+      .chain(visits)
       .map((value) => { return {name: value.ua.browser.name }})
       .countBy("name")
       .map((value, key) => { return {name: key, pageviews: value} })
@@ -38,13 +19,9 @@ Template.dashboard.helpers({
       .value()
   },
   countries() {
-    const visits = Visits.byDateRange(
-      Session.get("domainId"),
-      Session.get("startTime"),
-      Session.get("endTime")
-    )
+    const visits = Filter.getVisits()
     return _
-      .chain(visits.fetch())
+      .chain(visits)
       .map((value) => { return {name: value.geo.c }})
       .countBy("name")
       .map((value, key) => { return {name: key, pageviews: value} })
@@ -54,13 +31,9 @@ Template.dashboard.helpers({
       .value()
   },
   operationSystems() {
-    const visits = Visits.byDateRange(
-      Session.get("domainId"),
-      Session.get("startTime"),
-      Session.get("endTime")
-    )
+    const visits = Filter.getVisits()
     return _
-      .chain(visits.fetch())
+      .chain(visits)
       .map((value) => { return {name: value.ua.os.name }})
       .countBy("name")
       .map((value, key) => { return {name: key, pageviews: value} })
@@ -70,13 +43,9 @@ Template.dashboard.helpers({
       .value()
   },
   deviceTypes() {
-    const visits = Visits.byDateRange(
-      Session.get("domainId"),
-      Session.get("startTime"),
-      Session.get("endTime")
-    )
+    const visits = Filter.getVisits()
     return _
-      .chain(visits.fetch())
+      .chain(visits)
       .map((value) => { return {name: value.ua.device.type }})
       .countBy("name")
       .map((value, key) => { return {name: key, pageviews: value} })
