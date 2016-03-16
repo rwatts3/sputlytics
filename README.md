@@ -8,6 +8,7 @@ Sputlytics is an open-source and self-hosted analytics platform built with Meteo
 * Clone this repository: `git clone git@github.com:sputlytics/sputlytics.git`
 * Run the server: `cd sputlytics; npm start`
 * Open the browser and access: http://localhost:3000
+* Running Lint: `npm run lint`
 
 ## About
 
