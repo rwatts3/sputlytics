@@ -2,10 +2,8 @@ Seed = {
   init() {
     if (process.env.NODE_ENV === "development") {
       console.log("Seeding database...")
-      Domains.remove({})
       const domainId1 = Domains.insert({domain: "sputlytics.com"})
       const domainId2 = Domains.insert({domain: "blog.sputlytics.com"})
-      Visits.remove({})
       Visits.insert({
         dkey: domainId1,
         path: "/",
@@ -231,12 +229,18 @@ Seed = {
         lang: "en-uk",
         screen: { w: 1024, h: 768 }
       })
-      Meteor.users.remove({})
       const userId1 = Accounts.createUser({username: "caio", email: "caio@mail.com", password: "123456"})
       const userId2 = Accounts.createUser({username: "lucas", email: "lucas@mail.com", password: "123456"})
       Meteor.users.update(userId1, {$set: {domainIds: [domainId1, domainId2]}})
       Meteor.users.update(userId2, {$set: {domainIds: [domainId1, domainId2]}})
       console.log("Seed is done!")
+    }
+  },
+  clear() {
+    if (process.env.NODE_ENV === "development") {
+      Meteor.users.remove({})
+      Visits.remove({})
+      Domains.remove({})
     }
   }
 }
