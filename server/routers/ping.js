@@ -21,11 +21,13 @@ Picker.route("/ping", (params, req, res, next) => {
     const path = origin.pathname
     const lang = query.l || null
     const returnedVisitor = query.v || null
+    const referrer = query.r || null
     agent.device.type = device.getDeviceType(headers["user-agent"])
     const visit = {
       dkey: dkey,
       path: path,
       ip: ip,
+      rf: referrer,
       rv: returnedVisitor,
       geo: {
         ll: geo.ll,
