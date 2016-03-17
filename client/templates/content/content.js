@@ -11,9 +11,9 @@ Template.content.helpers({
   pages() {
     const visits = Filter.getVisits()
     const pageviews = _.chain(visits)
-      .map((value) => { return {path: value.path }})
+      .map((value) => {return {path: value.path}})
       .countBy("path")
-      .map((value, key) => { return {page: key, pageviews: value} })
+      .map((value, key) => {return {page: key, pageviews: value}})
       .sortBy("pageviews")
       .value()
     return pageviewsSort.get() ? pageviews : pageviews.reverse()

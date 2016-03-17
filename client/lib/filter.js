@@ -3,9 +3,9 @@ Filter = {
   init() {
     const userSubs = Meteor.subscribe("currentUser")
     Meteor.subscribe("domains")
-    Session.setDefault("domainId", false)
-    Session.setDefault("startTime", +moment().subtract(1, "day").startOf("day"))
-    Session.setDefault("endTime", +moment().endOf("day"))
+    Session.set("domainId", false)
+    Session.set("startTime", +moment().subtract(1, "day").startOf("day"))
+    Session.set("endTime", +moment().endOf("day"))
     Tracker.autorun(() => {
       if (userSubs.ready()) {
         if (!Session.get("domainId")) {
