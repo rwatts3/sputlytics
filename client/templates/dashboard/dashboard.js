@@ -1,6 +1,12 @@
-Template.dashboard.onCreated(() => {
+Template.dashboard.onCreated(function(){
   Filter.init()
-})
+  this.autorun(() => {
+    let domainId = Session.get("domainId");
+    let startTime = Session.get("startTime");
+    let endTime = Session.get("endTime");
+    Filter.refresh(domainId, startTime, endTime);
+  });
+});
 
 Template.dashboard.helpers({
   isReady() {

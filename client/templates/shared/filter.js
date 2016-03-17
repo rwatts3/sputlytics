@@ -15,7 +15,9 @@ Template.filter.helpers({
     return this._id === Session.get("domainId")
   },
   domains() {
-    return Domains.find({_id: {$in: Meteor.user().domainIds}})
+    // FIX: This is returning an exception
+    // return Domains.find({_id: {$in: Meteor.user().domainIds}});
+    return Domains.find({});
   },
   startDate() {
     return moment(Session.get("startTime")).format("MM/DD/YYYY")
@@ -34,5 +36,19 @@ Template.filter.events({
     let startTime = +moment(startDate, "MM/DD/YYYY").startOf("day")
     let endTime = +moment(endDate, "MM/DD/YYYY").endOf("day")
     Filter.refresh(domainId, startTime, endTime)
-  }
-})
+  },
+  'change #domains'(e, t){
+    let domainId = e.target.value;
+    Session.set('domainId', domainId);
+  },
+  'change #startDate'(e, t){
+    let startDate = e.target.value;
+    let startTime = +moment(startDate, "MM/DD/YYYY").startOf("day");
+    Session.set('startTime', startTime);
+  },
+  'change #endDate'(e, t){
+    let endDate = e.target.value;
+    let endTime = +moment(endDate, "MM/DD/YYYY").endOf("day")
+    Session.set('endTime', endTime);
+  },
+});
