@@ -16,7 +16,7 @@ Template.dashboard.helpers({
     const visits = Filter.getVisits()
     return _
       .chain(visits)
-      .map((value) => { return {name: value.ua.browser.name }})
+      .map((value) => { return {name: value.ua.browser.name || "(not set)" }})
       .countBy("name")
       .map((value, key) => { return {name: key, pageviews: value} })
       .sortBy("pageviews")
@@ -28,7 +28,7 @@ Template.dashboard.helpers({
     const visits = Filter.getVisits()
     return _
       .chain(visits)
-      .map((value) => { return {name: value.geo.c }})
+      .map((value) => { return {name: value.geo.c || "(not set)" }})
       .countBy("name")
       .map((value, key) => { return {name: key, pageviews: value} })
       .sortBy("pageviews")
@@ -40,7 +40,7 @@ Template.dashboard.helpers({
     const visits = Filter.getVisits()
     return _
       .chain(visits)
-      .map((value) => { return {name: value.ua.os.name }})
+      .map((value) => { return {name: value.ua.os.name || "(not set)" }})
       .countBy("name")
       .map((value, key) => { return {name: key, pageviews: value} })
       .sortBy("pageviews")
@@ -52,7 +52,7 @@ Template.dashboard.helpers({
     const visits = Filter.getVisits()
     return _
       .chain(visits)
-      .map((value) => { return {name: value.ua.device.type }})
+      .map((value) => { return {name: value.ua.device.type || "(not set)" }})
       .countBy("name")
       .map((value, key) => { return {name: key, pageviews: value} })
       .sortBy("pageviews")
