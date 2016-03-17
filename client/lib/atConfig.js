@@ -2,7 +2,7 @@ AccountsTemplates.configure({
   defaultLayout: "layout",
   defaultLayoutRegions: {},
   defaultContentRegion: "main",
-  confirmPassword: true,
+  confirmPassword: false,
   enablePasswordChange: true,
   forbidClientAccountCreation: false,
   sendVerificationEmail: false,
