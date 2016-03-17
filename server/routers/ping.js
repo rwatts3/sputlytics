@@ -19,11 +19,14 @@ Picker.route("/ping", (params, req, res, next) => {
     const geo = geoip.lookup(ip) || {}
     const agent = userAgent(headers["user-agent"])
     const path = origin.pathname
+    const lang = query.l || null
+    const returnedVisitor = query.v || null
     agent.device.type = device.getDeviceType(headers["user-agent"])
-    Visits.insert({
+    const visit = {
       dkey: dkey,
       path: path,
       ip: ip,
+      rv: returnedVisitor,
       geo: {
         ll: geo.ll,
         c: geo.country,
@@ -31,15 +34,17 @@ Picker.route("/ping", (params, req, res, next) => {
         rg: geo.region
       },
       ua: agent,
-      lang: query.l,
-      screen: {
+      l: lang,
+      sc: {
         w: +query.w,
         h: +query.h
       }
-    })
-    res.writeHead(204)
+    }
+    const id = Visits.insert(visit)
+    res.writeHead(200)
+    res.end(id)
   } else {
     res.writeHead(412)
+    res.end()
   }
-  res.end()
 })
