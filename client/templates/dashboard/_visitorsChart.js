@@ -5,6 +5,8 @@ Template._visitorsChart.onRendered(() => {
     .noData("No data in this period")
     .showLegend(false)
     .showLabels(true)
+    .labelType("percent")
+    .valueFormat(d3.format("d"))
   Tracker.autorun(() => {
     if (Session.get("isReady")) {
       const visits = Filter.getVisits()
@@ -16,8 +18,8 @@ Template._visitorsChart.onRendered(() => {
         .value()
       const newVisits = _.size(visits) - returnedVisits
       const data = [
-        {label: "New", value: newVisits, color: "#2ecc71"},
-        {label: "Returned", value: returnedVisits, color: "#2980b9"}
+        {label: "New visitors", value: newVisits, color: "#2ecc71"},
+        {label: "Returned visitors", value: returnedVisits, color: "#2980b9"}
       ]
       nv.addGraph(() => {
         d3.select("svg#visitorschart")

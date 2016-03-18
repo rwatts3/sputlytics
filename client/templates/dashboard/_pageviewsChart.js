@@ -6,6 +6,7 @@ Template._pageviewsChart.onRendered(() => {
     .showLegend(false)
     .staggerLabels(true)
     .showValues(true)
+    .valueFormat(d3.format("d"))
   Tracker.autorun(() => {
     if (Session.get("isReady")) {
       const visits = Filter.getVisits()
