@@ -7,7 +7,7 @@ Seed = {
         email: "caio@mail.com",
         password: "123456",
         profile: {
-          domain: "sputlytics.com"
+          domain: "https://sputlytics.com"
         }
       })
       const userId2 = Accounts.createUser({
@@ -15,7 +15,7 @@ Seed = {
         email: "lucas@mail.com",
         password: "123456",
         profile: {
-          domain: "blog.sputlytics.com"
+          domain: "http://blog.sputlytics.com"
         }
       })
       const domainId1 = Meteor.users.findOne(userId1).domainIds[0]

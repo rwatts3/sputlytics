@@ -25,6 +25,15 @@ Template.settings.helpers({
 Template.settings.events({
   "click [data-domain-id]": (event) => {
     event.preventDefault()
-    console.log($(event.currentTarget).data("domain-id"))
+    if (confirm("We'll clear all data from this domain, are you sure?")) {
+      const domainId = $(event.currentTarget).data("domain-id")
+      Meteor.call("deleteDomain", domainId, (err) => {
+        if (err) {
+          alert(err.reason)
+        } else {
+          alert("Domain successfully deleted")
+        }
+      })
+    }
   }
 })
