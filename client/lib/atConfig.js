@@ -21,8 +21,8 @@ AccountsTemplates.configure({
       signUp: "Register now!"
     },
     title: {
-      signIn: "Sputlytics",
-      signUp: "Sputlytics"
+      signIn: "",
+      signUp: ""
     }
   }
 })

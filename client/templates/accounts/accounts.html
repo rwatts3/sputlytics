@@ -1,12 +1,15 @@
 <template name="accounts">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <div class="jumbotron">
+  <div class="accounts-bg"></div>
+  <div class="row" style="margin-top:25px;">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="jumbotron text-center">
+        <img src="images/sputlytics-144-logo.png" width="144" height="144">
         {{#if hasUsers}}
           {{> atForm}}
         {{else}}
           {{> atForm state='signUp'}}
         {{/if}}
+        <p><small>Powered by <a href="https://sputlytics.com" target="_blank">Sputlytics</a></small></p>
       </div>
     </div>
   </div>
