@@ -24,6 +24,8 @@ Seed = {
         dkey: domainId1,
         path: "/",
         ip: "100.100.88.25",
+        rf: null,
+        rv: null,
         geo: { ll: [-23.960766, -46.396080], c: "BR", ct: "São Vicente", rg: null},
         ua: {
           browser: { name: "Chrome", version: "48.0.2564.116", major: "48" },
@@ -32,13 +34,15 @@ Seed = {
           device: { model: null, vendor: null, type: "desktop" },
           cpu: { architecture: "amd64" }
         },
-        lang: "pt-br",
-        screen: { w: 1440, h: 900 }
+        l: "pt-br",
+        sc: { w: 1440, h: 900 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/about",
         ip: "100.100.100.99",
+        rf: null,
+        rv: null,
         geo: { ll: [49.282729, -123.120738], c: "CA", ct: "Vancouver", rg: null},
         ua: {
           browser: { name: "Chrome", version: "48.0.2564.116", major: "48" },
@@ -47,13 +51,15 @@ Seed = {
           device: { model: null, vendor: null, type: "desktop" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-ca",
-        screen: { w: 1440, h: 900 }
+        l: "en-ca",
+        sc: { w: 1440, h: 900 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/jobs",
         ip: "100.100.100.99",
+        rf: null,
+        rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
           browser: { name: "Mobile Safari", version: "4.0.5", major: "4" },
@@ -62,13 +68,15 @@ Seed = {
           device: { model: "iPhone", vendor: "Apple", type: "mobile" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-uk",
-        screen: { w: 768, h: 1280 }
+        l: "en-uk",
+        sc: { w: 768, h: 1280 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/jobs",
         ip: "100.100.100.99",
+        rf: null,
+        rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
           browser: { name: "Mobile Safari", version: "4.0.5", major: "4" },
@@ -77,13 +85,15 @@ Seed = {
           device: { model: "iPhone", vendor: "Apple", type: "mobile" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-uk",
-        screen: { w: 768, h: 1280 }
+        l: "en-uk",
+        sc: { w: 768, h: 1280 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/jobs",
         ip: "100.100.100.99",
+        rf: null,
+        rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
           browser: { name: "Mobile Safari", version: "4.0.5", major: "4" },
@@ -92,13 +102,15 @@ Seed = {
           device: { model: "iPhone", vendor: "Apple", type: "mobile" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-uk",
-        screen: { w: 768, h: 1280 }
+        l: "en-uk",
+        sc: { w: 768, h: 1280 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/jobs",
         ip: "100.100.100.99",
+        rf: null,
+        rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
           browser: { name: "Mobile Safari", version: "4.0.5", major: "4" },
@@ -107,13 +119,15 @@ Seed = {
           device: { model: "iPhone", vendor: "Apple", type: "mobile" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-uk",
-        screen: { w: 768, h: 1280 }
+        l: "en-uk",
+        sc: { w: 768, h: 1280 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/contacts",
         ip: "100.100.100.99",
+        rf: null,
+        rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
           browser: { name: "Microsoft Edge", version: "12.0.0.1", major: "12" },
@@ -122,13 +136,15 @@ Seed = {
           device: { model: null, vendor: null, type: "desktop" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-us",
-        screen: { w: 1440, h: 900 }
+        l: "en-us",
+        sc: { w: 1440, h: 900 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/contacts",
         ip: "100.100.100.99",
+        rf: null,
+        rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
           browser: { name: "Microsoft Edge", version: "12.0.0.1", major: "12" },
@@ -137,13 +153,15 @@ Seed = {
           device: { model: null, vendor: null, type: "desktop" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-us",
-        screen: { w: 1440, h: 900 }
+        l: "en-us",
+        sc: { w: 1440, h: 900 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/contacts",
         ip: "98.92.191.200",
+        rf: null,
+        rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
           browser: { name: "Opera", version: "12.00", major: "12" },
@@ -152,13 +170,15 @@ Seed = {
           device: { model: null, vendor: null, type: "desktop" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-us",
-        screen: { w: 1920, h: 1080 }
+        l: "en-us",
+        sc: { w: 1920, h: 1080 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/contacts",
         ip: "100.100.100.99",
+        rf: null,
+        rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
           browser: { name: "Microsoft Edge", version: "12.0.0.1", major: "12" },
@@ -167,13 +187,15 @@ Seed = {
           device: { model: null, vendor: null, type: "desktop" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-us",
-        screen: { w: 1440, h: 900 }
+        l: "en-us",
+        sc: { w: 1440, h: 900 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/contacts",
         ip: "198.98.22.100",
+        rf: null,
+        rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
           browser: { name: "IE", version: "10.0", major: "10" },
@@ -182,13 +204,15 @@ Seed = {
           device: { model: null, vendor: null, type: "desktop" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-us",
-        screen: { w: 1920, h: 1080 }
+        l: "en-us",
+        sc: { w: 1920, h: 1080 }
       })
       Visits.insert({
         dkey: domainId1,
         path: "/contacts",
         ip: "198.98.22.100",
+        rf: null,
+        rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
           browser: { name: "IE", version: "10.0", major: "10" },
@@ -197,13 +221,15 @@ Seed = {
           device: { model: null, vendor: null, type: "desktop" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-us",
-        screen: { w: 1920, h: 1080 }
+        l: "en-us",
+        sc: { w: 1920, h: 1080 }
       })
       Visits.insert({
         dkey: domainId2,
         path: "/",
         ip: "100.100.200.54",
+        rf: null,
+        rv: null,
         geo: { ll: [-23.960766, -46.396080], c: "BR", ct: "São Vicente", rg: null},
         ua: {
           browser: { name: "Chrome", version: "48.0.2564.116", major: "48" },
@@ -212,13 +238,15 @@ Seed = {
           device: { model: "S20", vendor: "Samsung", type: "desktop" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-uk",
-        screen: { w: 1024, h: 768 }
+        l: "en-uk",
+        sc: { w: 1024, h: 768 }
       })
       Visits.insert({
         dkey: domainId2,
         path: "/",
         ip: "100.300.300.53",
+        rf: null,
+        rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
           browser: { name: "Firefox", version: "48.0.2564.116", major: "48" },
@@ -227,13 +255,15 @@ Seed = {
           device: { model: "Moto X", vendor: "Motorola", type: "mobile" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-uk",
-        screen: { w: 1280, h: 800 }
+        l: "en-uk",
+        sc: { w: 1280, h: 800 }
       })
       Visits.insert({
         dkey: domainId2,
         path: "/post",
         ip: "255.198.172.99",
+        rf: null,
+        rv: null,
         geo: { ll: [51.507351, -0.127758], c: "UK", ct: "London", rg: null},
         ua: {
           browser: { name: "Safari", version: "48.0.2564.116", major: "48" },
@@ -242,8 +272,8 @@ Seed = {
           device: { model: "Nexus", vendor: "Asus", type: "mobile" },
           cpu: { architecture: "amd64" }
         },
-        lang: "en-uk",
-        screen: { w: 1024, h: 768 }
+        l: "en-uk",
+        sc: { w: 1024, h: 768 }
       })
       console.log("Seed is done!")
     }

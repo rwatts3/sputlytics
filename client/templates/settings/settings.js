@@ -21,3 +21,10 @@ Template.settings.helpers({
     `
   }
 })
+
+Template.settings.events({
+  "click [data-domain-id]": (event) => {
+    event.preventDefault()
+    console.log($(event.currentTarget).data("domain-id"))
+  }
+})
