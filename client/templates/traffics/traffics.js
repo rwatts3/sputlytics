@@ -11,7 +11,7 @@ Template.traffics.helpers({
   sites() {
     const visits = Filter.getVisits()
     const sites = _.chain(visits)
-      .map((value) => {return {name: value.rf || "(not set)"}})
+      .map((value) => {return {name: value.rf || "direct"}})
       .countBy("name")
       .map((value, key) => {return {name: key, total: value}})
       .sortBy("total")
