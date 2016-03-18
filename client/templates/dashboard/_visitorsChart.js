@@ -17,10 +17,11 @@ Template._visitorsChart.onRendered(() => {
         .reduce((sum, val) => {return sum + val}, 0)
         .value()
       const newVisits = _.size(visits) - returnedVisits
-      const data = [
-        {label: "New visitors", value: newVisits, color: "#2ecc71"},
-        {label: "Returned visitors", value: returnedVisits, color: "#2980b9"}
-      ]
+      const data = []
+      if (newVisits || returnedVisits) {
+        data.push({label: "New visitors", value: newVisits, color: "#2ecc71"})
+        data.push({label: "Returned visitors", value: returnedVisits, color: "#2980b9"})
+      }
       nv.addGraph(() => {
         d3.select("svg#visitorschart")
           .datum(data)
