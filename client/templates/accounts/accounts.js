@@ -1,8 +1,8 @@
-Template.signin.onCreated(() => {
+Template.accounts.onCreated(() => {
   Meteor.subscribe("hasUsers")
 })
 
-Template.signin.helpers({
+Template.accounts.helpers({
   hasUsers() {
     return !!Meteor.users.find({}).count()
   }
