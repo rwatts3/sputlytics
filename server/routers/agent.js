@@ -50,3 +50,18 @@ Picker.route("/ping", (params, req, res, next) => {
     res.end()
   }
 })
+
+Picker.route("/pong", (params, req, res, next) => {
+  const headers = req.headers
+  const query = params.query
+  const referer = headers.referer
+  const origin = url.parse(referer) || null
+  const dkey = query.k || null
+  if (!!Domains.findOne({_id: dkey, domain: origin.host})) {
+    Domains.update({_id: dkey}, {$set: {timeEnd: Date.now()}})
+    res.writeHead(204)
+  } else {
+    res.writeHead(412)
+  }
+  res.end()
+})
