@@ -35,7 +35,12 @@ Picker.route("/ping", (params, req, res, next) => {
         ct: geo.city,
         rg: geo.region
       },
-      ua: agent,
+      ua: {
+        browser: _.omit(agent.browser, "major"),
+        engine: agent.engine,
+        os: agent.os,
+        device: agent.device
+      },
       l: lang,
       sc: {
         w: +query.w,
