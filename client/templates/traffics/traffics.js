@@ -1,4 +1,4 @@
-let totalSort = new ReactiveVar(true)
+let totalSort = new ReactiveVar(false)
 
 Template.traffics.onCreated(() => {
   Filter.init()

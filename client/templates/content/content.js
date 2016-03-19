@@ -1,4 +1,4 @@
-let pageviewsSort = new ReactiveVar(true)
+let pageviewsSort = new ReactiveVar(false)
 
 Template.content.onCreated(() => {
   Filter.init()
