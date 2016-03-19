@@ -13,7 +13,8 @@ Template._pageviewsChart.onRendered(() => {
       const pageviews = _.chain(visits)
         .map((visit) => { return {date: moment(visit.time).format("MM/DD/YY")}})
         .countBy("date")
-        .map((value, key) => { return {label: key, value: value}})
+        .map((value, key) => { return {time: +moment(key, "MM/DD/YY"), label: key, value: value}})
+        .sortBy("time")
         .value()
       const data = [{key: "Pageviews per day", values: pageviews}]
       nv.addGraph(() => {
