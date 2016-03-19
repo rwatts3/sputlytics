@@ -1,12 +1,12 @@
 Template._visitorsChart.onRendered(() => {
   const chart = nv.models.pieChart()
     .x((data) => data.label)
-    .y((data) => data.value)
+    .y((data) => Math.round(data.value))
     .noData("No data in this period")
     .showLegend(false)
     .showLabels(true)
     .labelType("percent")
-    .valueFormat(d3.format("d"))
+    .valueFormat(d3.format("0d"))
   Tracker.autorun(() => {
     if (Session.get("isReady")) {
       const visits = Filter.getVisits()
