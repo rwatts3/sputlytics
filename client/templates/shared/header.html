@@ -14,9 +14,13 @@
       </div>
       <div class="collapse navbar-collapse" id="menu-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/dashboard"><i class="fa fa-tachometer"></i>&nbsp;Dashboard</a></li>
-          <li><a href="/content"><i class="fa fa-list-alt"></i>&nbsp;Content</a></li>
-          <li class="dropdown">
+          <li class="{{#if isActive 'dashboard'}}active{{/if}}">
+            <a href="/dashboard"><i class="fa fa-tachometer"></i>&nbsp;Dashboard</a>
+          </li>
+          <li class="{{#if isActive 'content'}}active{{/if}}">
+            <a href="/content"><i class="fa fa-list-alt"></i>&nbsp;Content</a>
+          </li>
+          <li class="dropdown{{#if isActive 'audience'}} active{{/if}}">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               <i class="fa fa-users"></i>&nbsp;Audience<span class="caret"></span>
             </a>
@@ -24,8 +28,12 @@
               <li><a href="/audience/browsers"><i class="fa fa-chrome"></i>&nbsp;Browsers</a></li>
             </ul>
           </li>
-          <li><a href="/traffics"><i class="fa fa-filter"></i>&nbsp;Traffics</a></li>
-          <li><a href="/settings"><i class="fa fa-cogs"></i>&nbsp;Settings</a></li>
+          <li class="{{#if isActive 'traffics'}}active{{/if}}">
+            <a href="/traffics"><i class="fa fa-filter"></i>&nbsp;Traffics</a>
+          </li>
+          <li class="{{#if isActive 'settings'}}active{{/if}}">
+            <a href="/settings"><i class="fa fa-cogs"></i>&nbsp;Settings</a>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#" data-logout><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
