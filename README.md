@@ -10,6 +10,15 @@ Sputlytics is an open-source and self-hosted analytics platform built with Meteo
 * Open the browser and access: http://localhost:3000
 * Running Lint: `npm run lint`
 
+## Deployment
+
+### Heroku
+
+Host your own Sputlytics server for **FREE** with One-Click Deploy
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sputlytics/sputlytics/tree/master)
+
+
 ## About
 
 Caio Ribeiro Pereira  
