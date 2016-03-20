@@ -1,6 +1,6 @@
 {
   "name": "sputlytics",
-  "description": "Have your own open-source Slack-like online chat, built with Meteor.",
+  "description": "Have your own self-hosted analytics platform. Built with Meteor!",
   "repository": "https://github.com/sputlytics/sputlytics",
   "logo": "https://raw.githubusercontent.com/sputlytics/sputlytics.github.io/master/assets/images/sputlytics-96-logo.png",
   "keywords": ["meteor", "analytics"],
