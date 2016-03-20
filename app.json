@@ -1,0 +1,18 @@
+{
+  "name": "sputlytics",
+  "description": "Have your own open-source Slack-like online chat, built with Meteor.",
+  "repository": "https://github.com/sputlytics/sputlytics",
+  "logo": "https://raw.githubusercontent.com/sputlytics/sputlytics.github.io/master/assets/images/sputlytics-96-logo.png",
+  "keywords": ["meteor", "analytics"],
+  "website": "http://sputlytics.com",
+  "env": {
+    "BUILDPACK_URL": "https://github.com/AdmitHub/meteor-buildpack-horse.git",
+    "ROOT_URL": {
+      "description": "IMPORTANT! Must be 'https://<App Name>.herokuapp.com' Replace <App Name> with the value you provided at the top. This will be the full URL of your App.",
+      "required": true
+    }
+  },
+  "addons": [
+    "mongolab"
+  ]
+}
