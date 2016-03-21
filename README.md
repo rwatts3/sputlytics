@@ -14,7 +14,7 @@ Sputlytics is an open-source and self-hosted analytics platform built with Meteo
 
 ### Heroku
 
-Host your own Sputlytics server for **FREE** with One-Click Deploy
+Host your own Sputlytics server for **FREE** with [One-Click Deploy](https://heroku.com/deploy?template=https://github.com/sputlytics/sputlytics/tree/master)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sputlytics/sputlytics/tree/master)
 
