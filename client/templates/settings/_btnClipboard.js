@@ -5,3 +5,9 @@ Template._btnClipboard.onRendered(() => {
     $('[data-toggle="tooltip"]').tooltip('show')
   })
 })
+
+Template._btnClipboard.events({
+  "mouseleave .btn-clipboard": (event) => {
+    $('[data-toggle="tooltip"]').tooltip('hide')
+  }
+})
