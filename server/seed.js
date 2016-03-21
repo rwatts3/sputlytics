@@ -28,11 +28,10 @@ Seed = {
         rv: null,
         geo: { ll: [-23.960766, -46.396080], c: "BR", ct: "São Vicente", rg: null},
         ua: {
-          browser: { name: "Chrome", version: "48.0.2564.116", major: "48" },
+          browser: { name: "Chrome", version: "48.0.2564.116"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Windows", version: "10" },
-          device: { model: null, vendor: null, type: "desktop" },
-          cpu: { architecture: "amd64" }
+          device: { model: null, vendor: null, type: "desktop" }
         },
         l: "pt-br",
         sc: { w: 1440, h: 900 }
@@ -45,11 +44,10 @@ Seed = {
         rv: null,
         geo: { ll: [49.282729, -123.120738], c: "CA", ct: "Vancouver", rg: null},
         ua: {
-          browser: { name: "Chrome", version: "48.0.2564.116", major: "48" },
+          browser: { name: "Chrome", version: "48.0.2564.116"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Mac OSX", version: "10.10" },
-          device: { model: null, vendor: null, type: "desktop" },
-          cpu: { architecture: "amd64" }
+          device: { model: null, vendor: null, type: "desktop" }
         },
         l: "en-ca",
         sc: { w: 1440, h: 900 }
@@ -62,11 +60,10 @@ Seed = {
         rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
-          browser: { name: "Mobile Safari", version: "4.0.5", major: "4" },
+          browser: { name: "Mobile Safari", version: "4.0.5"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "iOS", version: "4.0" },
-          device: { model: "iPhone", vendor: "Apple", type: "mobile" },
-          cpu: { architecture: "amd64" }
+          device: { model: "iPhone", vendor: "Apple", type: "mobile" }
         },
         l: "en-uk",
         sc: { w: 768, h: 1280 }
@@ -79,11 +76,10 @@ Seed = {
         rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
-          browser: { name: "Mobile Safari", version: "4.0.5", major: "4" },
+          browser: { name: "Mobile Safari", version: "4.0.5"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "iOS", version: "4.0" },
-          device: { model: "iPhone", vendor: "Apple", type: "mobile" },
-          cpu: { architecture: "amd64" }
+          device: { model: "iPhone", vendor: "Apple", type: "mobile" }
         },
         l: "en-uk",
         sc: { w: 768, h: 1280 }
@@ -96,11 +92,10 @@ Seed = {
         rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
-          browser: { name: "Mobile Safari", version: "4.0.5", major: "4" },
+          browser: { name: "Mobile Safari", version: "4.0.5"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "iOS", version: "4.0" },
-          device: { model: "iPhone", vendor: "Apple", type: "mobile" },
-          cpu: { architecture: "amd64" }
+          device: { model: "iPhone", vendor: "Apple", type: "mobile" }
         },
         l: "en-uk",
         sc: { w: 768, h: 1280 }
@@ -113,11 +108,10 @@ Seed = {
         rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
-          browser: { name: "Mobile Safari", version: "4.0.5", major: "4" },
+          browser: { name: "Mobile Safari", version: "4.0.5"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "iOS", version: "4.0" },
-          device: { model: "iPhone", vendor: "Apple", type: "mobile" },
-          cpu: { architecture: "amd64" }
+          device: { model: "iPhone", vendor: "Apple", type: "mobile" }
         },
         l: "en-uk",
         sc: { w: 768, h: 1280 }
@@ -130,11 +124,10 @@ Seed = {
         rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
-          browser: { name: "Microsoft Edge", version: "12.0.0.1", major: "12" },
+          browser: { name: "Microsoft Edge", version: "12.0.0.1"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Windows", version: "10" },
-          device: { model: null, vendor: null, type: "desktop" },
-          cpu: { architecture: "amd64" }
+          device: { model: null, vendor: null, type: "desktop" }
         },
         l: "en-us",
         sc: { w: 1440, h: 900 }
@@ -147,11 +140,10 @@ Seed = {
         rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
-          browser: { name: "Microsoft Edge", version: "12.0.0.1", major: "12" },
+          browser: { name: "Microsoft Edge", version: "12.0.0.1"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Windows", version: "10" },
-          device: { model: null, vendor: null, type: "desktop" },
-          cpu: { architecture: "amd64" }
+          device: { model: null, vendor: null, type: "desktop" }
         },
         l: "en-us",
         sc: { w: 1440, h: 900 }
@@ -164,11 +156,10 @@ Seed = {
         rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
-          browser: { name: "Opera", version: "12.00", major: "12" },
+          browser: { name: "Opera", version: "12.00"},
           engine: { name: "Presto", version: "2.9.181" },
           os: { name: "Windows", version: "7" },
-          device: { model: null, vendor: null, type: "desktop" },
-          cpu: { architecture: "amd64" }
+          device: { model: null, vendor: null, type: "desktop" }
         },
         l: "en-us",
         sc: { w: 1920, h: 1080 }
@@ -181,11 +172,10 @@ Seed = {
         rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
-          browser: { name: "Microsoft Edge", version: "12.0.0.1", major: "12" },
+          browser: { name: "Microsoft Edge", version: "12.0.0.1"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Windows", version: "10" },
-          device: { model: null, vendor: null, type: "desktop" },
-          cpu: { architecture: "amd64" }
+          device: { model: null, vendor: null, type: "desktop" }
         },
         l: "en-us",
         sc: { w: 1440, h: 900 }
@@ -198,11 +188,10 @@ Seed = {
         rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
-          browser: { name: "IE", version: "10.0", major: "10" },
+          browser: { name: "IE", version: "10.0"},
           engine: { name: "Trident", version: "6.0" },
           os: { name: "Windows", version: "7" },
-          device: { model: null, vendor: null, type: "desktop" },
-          cpu: { architecture: "amd64" }
+          device: { model: null, vendor: null, type: "desktop" }
         },
         l: "en-us",
         sc: { w: 1920, h: 1080 }
@@ -215,11 +204,10 @@ Seed = {
         rv: null,
         geo: { ll: [25.761680, -80.191790], c: "US", ct: "Miami", rg: null},
         ua: {
-          browser: { name: "IE", version: "10.0", major: "10" },
+          browser: { name: "IE", version: "10.0"},
           engine: { name: "Trident", version: "6.0" },
           os: { name: "Windows", version: "7" },
-          device: { model: null, vendor: null, type: "desktop" },
-          cpu: { architecture: "amd64" }
+          device: { model: null, vendor: null, type: "desktop" }
         },
         l: "en-us",
         sc: { w: 1920, h: 1080 }
@@ -232,11 +220,10 @@ Seed = {
         rv: null,
         geo: { ll: [-23.960766, -46.396080], c: "BR", ct: "São Vicente", rg: null},
         ua: {
-          browser: { name: "Chrome", version: "48.0.2564.116", major: "48" },
+          browser: { name: "Chrome", version: "48.0.2564.116"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Windows", version: "10" },
-          device: { model: "S20", vendor: "Samsung", type: "desktop" },
-          cpu: { architecture: "amd64" }
+          device: { model: "S20", vendor: "Samsung", type: "desktop" }
         },
         l: "en-uk",
         sc: { w: 1024, h: 768 }
@@ -249,11 +236,10 @@ Seed = {
         rv: null,
         geo: { ll: [51.508002, -1.123456], c: "UK", ct: "West Berkshire", rg: null},
         ua: {
-          browser: { name: "Firefox", version: "48.0.2564.116", major: "48" },
+          browser: { name: "Firefox", version: "48.0.2564.116"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Android", version: "6" },
-          device: { model: "Moto X", vendor: "Motorola", type: "mobile" },
-          cpu: { architecture: "amd64" }
+          device: { model: "Moto X", vendor: "Motorola", type: "mobile" }
         },
         l: "en-uk",
         sc: { w: 1280, h: 800 }
@@ -266,11 +252,10 @@ Seed = {
         rv: null,
         geo: { ll: [51.507351, -0.127758], c: "UK", ct: "London", rg: null},
         ua: {
-          browser: { name: "Safari", version: "48.0.2564.116", major: "48" },
+          browser: { name: "Safari", version: "48.0.2564.116"},
           engine: { name: "WebKit", version: "537.36" },
           os: { name: "Android", version: "6" },
-          device: { model: "Nexus", vendor: "Asus", type: "mobile" },
-          cpu: { architecture: "amd64" }
+          device: { model: "Nexus", vendor: "Asus", type: "mobile" }
         },
         l: "en-uk",
         sc: { w: 1024, h: 768 }
