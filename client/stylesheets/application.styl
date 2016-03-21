@@ -1,0 +1,48 @@
+.loading-box {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.loading-box h2 {
+  color: #a9a9a9;
+}
+
+.loading {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border: 3px solid #a9a9a9;
+  border-radius: 100%;
+}
+
+.loading-ball-holder {
+  position: absolute;
+  width: 12px;
+  height: 45px;
+  left: 15px;
+  top: 0px;
+}
+
+.loading-ball {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #898989;
+}
+
+.loading-box .loading-ball-holder {
+  animation: loadingAnim 1.3s linear infinite;
+}
+
+@keyframes loadingAnim {
+  0 {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
