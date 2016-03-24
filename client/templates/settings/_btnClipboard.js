@@ -1,8 +1,8 @@
-Template._btnClipboard.onRendered(() => {
-	const id = this.data.id
-  const clipboard = new Clipboard(`#${id}`)
+Template._btnClipboard.onRendered(function() {
+	const selector = `button[data-id='${this.data.id}']`
+  const clipboard = new Clipboard(selector)
   clipboard.on('success', (e) => {
-  	$(`#${id}`).tooltip('show')
+  	$(selector).tooltip('show')
 	})
 })
 
