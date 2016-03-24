@@ -35,5 +35,17 @@ Template.settings.events({
         }
       })
     }
+  },
+  "submit [data-add-domain]": (event) => {
+    event.preventDefault()
+    const domain = $(event.target).find("#domain")
+    Meteor.call("addDomain", domain.val(), (err) => {
+      if (err) {
+        alert(err.reason)
+      } else {
+        alert("Domain successfully registered!")
+        domain.val("")
+      }
+    })
   }
 })
