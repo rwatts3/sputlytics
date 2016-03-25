@@ -12,8 +12,8 @@
           <div class="panel-body">
             <form data-add-domain>
               <div class="form-group col-xs-10 col-sm-4">
-                <label for="domain" class="control-label">Domain</label>
-                <input type="url" class="form-control" id="domain" placeholder="http://mydomain.com">
+                <label for="url" class="control-label">URL</label>
+                <input type="url" class="form-control" id="url" placeholder="http://mydomain.com">
               </div>
               <div class="form-group col-xs-12">
                 <button class="btn btn-success">
@@ -29,7 +29,7 @@
           <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">
-                <i class="fa fa-code"></i>&nbsp;Website tracking - {{domain}}
+                <i class="fa fa-code"></i>&nbsp;Website tracking - {{url}}
               </h3>
             </div>
             <div class="panel-body">
@@ -41,7 +41,10 @@
               </div>
               <div class="form-group">
                 {{> _btnClipboard id=_id text=trackingCode}}
-                <button class="btn btn-danger" data-domain-id="{{_id}}">
+                <button class="btn btn-success" data-check-domain="{{_id}}">
+                  <i class="fa fa-check"></i>&nbsp;Verify domain
+                </button>
+                <button class="btn btn-danger" data-delete-domain="{{_id}}">
                   <i class="fa fa-trash"></i>&nbsp;Delete domain
                 </button>
               </div>

@@ -30,10 +30,15 @@ Meteor.methods({
     if (this.userId) {
       const domain = Domains.findOne(domainId)
       if (domain && domain.url) {
+        const snippet = `clientKey: "${domain._id}"`
         const result = HTTP.get(domain.url)
-        console.log(result)
+        if (result.statusCode === 200 && result.content.includes(snippet)) {
+          return true
+        } else {
+          throw new Meteor.Error(404, "Tracking code not found")
+        }
       } else {
-        throw new Meteor.Error(404, "Not found")
+        throw new Meteor.Error(404, "Tracking code not found")
       }
     } else {
       throw new Meteor.Error(412, "Not allowed")

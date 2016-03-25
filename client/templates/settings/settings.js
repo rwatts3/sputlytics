@@ -23,28 +23,45 @@ Template.settings.helpers({
 })
 
 Template.settings.events({
-  "click [data-domain-id]": (event) => {
+  "click [data-delete-domain]": (event) => {
     event.preventDefault()
+    $(event.currentTarget).attr("disabled", "disabled")
     if (confirm("We'll clear all data from this domain, are you sure?")) {
-      const domainId = $(event.currentTarget).data("domain-id")
+      const domainId = $(event.currentTarget).data("delete-domain")
       Meteor.call("deleteDomain", domainId, (err) => {
+        $(event.currentTarget).removeAttr("disabled")
         if (err) {
           alert(err.reason)
         } else {
           alert("Domain successfully deleted")
         }
       })
+    } else {
+      $(event.currentTarget).removeAttr("disabled")
     }
+  },
+  "click [data-check-domain]": (event) => {
+    event.preventDefault()
+    $(event.currentTarget).attr("disabled", "disabled")
+    const domainId = $(event.currentTarget).data("check-domain")
+    Meteor.call("checkDomain", domainId, (err) => {
+      $(event.currentTarget).removeAttr("disabled")
+      if (err) {
+        alert(err.reason)
+      } else {
+        alert("Tracking code working!")
+      }
+    })
   },
   "submit [data-add-domain]": (event) => {
     event.preventDefault()
-    const domain = $(event.target).find("#domain")
-    Meteor.call("addDomain", domain.val(), (err) => {
+    const url = $(event.target).find("#url")
+    Meteor.call("addDomain", url.val(), (err) => {
       if (err) {
         alert(err.reason)
       } else {
         alert("Domain successfully registered!")
-        domain.val("")
+        url.val("")
       }
     })
   }
