@@ -9,9 +9,18 @@ Template.traffics.helpers({
     return Session.get("isReady")
   },
   sites() {
+    const domain = Domains.findOne(Session.get("domainId"))
     const visits = Filter.getVisits()
     const sites = _.chain(visits)
-      .map((value) => {return {name: value.rf || "direct"}})
+      .map((value) => {
+        let rf = null
+        if (!!value.rf) {
+          rf = value.rf.includes(domain.url) ? "Direct" : value.rf
+        } else {
+          rf = "Direct"
+        }
+        return {name: rf}
+      })
       .countBy("name")
       .map((value, key) => {return {name: key, total: value}})
       .sortBy("total")
