@@ -2,7 +2,7 @@ Meteor.methods({
   addDomain: function(domain) {
     check(domain, String)
     if (this.userId) {
-      const domainId = Domains.insert({domain: domain})
+      const domainId = Domains.insert({url: domain})
       Meteor.users.update(
         {_id: this.userId},
         {$push: {domainIds: domainId}}
@@ -21,6 +21,20 @@ Meteor.methods({
         {$pull: {domainIds: {$in: [domainId]}}},
         {multi: true}
       )
+    } else {
+      throw new Meteor.Error(412, "Not allowed")
+    }
+  },
+  checkDomain: function(domainId) {
+    check(domainId, String)
+    if (this.userId) {
+      const domain = Domains.findOne(domainId)
+      if (domain && domain.url) {
+        const result = HTTP.get(domain.url)
+        console.log(result)
+      } else {
+        throw new Meteor.Error(404, "Not found")
+      }
     } else {
       throw new Meteor.Error(412, "Not allowed")
     }

@@ -14,7 +14,7 @@ Picker.route("/ping", (params, req, res, next) => {
   const referer = headers.referer
   const origin = url.parse(referer) || null
   const dkey = query.k || null
-  if (!!Domains.findOne({_id: dkey, domain: origin.host})) {
+  if (!!Domains.findOne({_id: dkey, url: origin.host})) {
     const ip = headers["x-forwarded-for"]
     const geo = geoip.lookup(ip) || {}
     const agent = userAgent(headers["user-agent"])
@@ -62,8 +62,9 @@ Picker.route("/pong", (params, req, res, next) => {
   const referer = headers.referer
   const origin = url.parse(referer) || null
   const dkey = query.k || null
-  if (!!Domains.findOne({_id: dkey, domain: origin.host})) {
-    Domains.update({_id: dkey}, {$set: {timeEnd: Date.now()}})
+  const visitId = query.v || null
+  if (!!Domains.findOne({_id: dkey, url: origin.host})) {
+    Visits.update({_id: visitId}, {$set: {timeEnd: Date.now()}})
     res.writeHead(204)
   } else {
     res.writeHead(412)
