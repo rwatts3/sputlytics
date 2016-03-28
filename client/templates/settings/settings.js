@@ -15,7 +15,7 @@ Template.settings.helpers({
             k=p.getElementsByTagName(u)[0];i.async=1;i.src=t;k.parentNode.insertBefore(i,k)
           })(window,document,"script","//cdn.sputlytics.com/agent.js","spa");
 
-          spa("init", {domain: "${Meteor.absoluteUrl()}", clientKey: "${this._id}"});
+          spa("init", {domain: "${Meteor.absoluteUrl().replace(/\/$/, "")}", clientKey: "${this._id}"});
           spa("pageview");
       </script>
     `
