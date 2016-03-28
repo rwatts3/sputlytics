@@ -1,6 +1,6 @@
 {
   "name": "sputlytics",
-  "description": "Sputlytics is a web analytics platform for blogs and websites, like Google Analytics but open-source and self-hosted, with easy setup and extensible codes to customize metrics according to your needs.",
+  "description": "Sputlytics is a web analytics platform for blogs and websites, like Google Analytics but open-source and self-hosted.",
   "repository": "https://github.com/sputlytics/sputlytics",
   "logo": "https://sputlytics.com/assets/images/sputlytics-small-logo.svg",
   "keywords": ["meteor", "analytics"],
