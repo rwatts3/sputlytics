@@ -10,12 +10,7 @@ Template.browsers.helpers({
   },
   browsers() {
     const visits = Filter.getVisits()
-    const total = _.chain(visits)
-      .map((value) => { return {name: value.ua.browser.name || "(not set)" }})
-      .countBy("name")
-      .map((value, key) => { return {name: key, total: value}})
-      .sortBy("total")
-      .value()
+    const browsers = Browsers.filter(visits)
     return totalSort.get() ? total : total.reverse()
   },
   totalSortClass() {
