@@ -10,7 +10,7 @@ Template.content.helpers({
   },
   pages() {
     const visits = Filter.getVisits()
-    const pageviews = Contents.filter(visits)
+    const pageviews = ContentService.filter(visits)
     return pageviewsSort.get() ? pageviews : pageviews.reverse()
   },
   pageviewsSortClass() {

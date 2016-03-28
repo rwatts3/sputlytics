@@ -11,7 +11,7 @@ Template.traffics.helpers({
   sites() {
     const domain = Domains.findOne(Session.get("domainId"))
     const visits = Filter.getVisits()
-    const sites = Traffics.filter(visits)
+    const sites = TrafficService.filter(visits)
     return totalSort.get() ? sites : sites.reverse()
   },
   totalSortClass() {

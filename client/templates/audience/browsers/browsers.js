@@ -10,7 +10,7 @@ Template.browsers.helpers({
   },
   browsers() {
     const visits = Filter.getVisits()
-    const browsers = Browsers.filter(visits)
+    const browsers = BrowserService.filter(visits)
     return totalSort.get() ? total : total.reverse()
   },
   totalSortClass() {
