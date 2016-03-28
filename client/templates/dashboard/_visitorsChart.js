@@ -10,17 +10,11 @@ Template._visitorsChart.onRendered(() => {
   Tracker.autorun(() => {
     if (Session.get("isReady")) {
       const visits = Filter.getVisits()
-      const returnedVisits = _.chain(visits)
-        .filter((v) => {return !!v.rv})
-        .countBy("rv")
-        .toArray()
-        .reduce((sum, val) => {return sum + val}, 0)
-        .value()
-      const newVisits = _.size(visits) - returnedVisits
+      const filtered = VisitorsChartService.filter(visits)
       const data = []
-      if (newVisits || returnedVisits) {
-        data.push({label: "New visitors", value: newVisits, color: "#2ecc71"})
-        data.push({label: "Returned visitors", value: returnedVisits, color: "#2980b9"})
+      if (filtered && filtered.newVisits || filtered.returnedVisits) {
+        data.push({label: "New visitors", value: filtered.newVisits, color: "#2ecc71"})
+        data.push({label: "Returned visitors", value: filtered.returnedVisits, color: "#2980b9"})
       }
       nv.addGraph(() => {
         d3.select("svg#visitorschart")
