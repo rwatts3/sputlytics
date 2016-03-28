@@ -1,6 +1,6 @@
 # Sputlytics
 
-Sputlytics is an open-source and self-hosted analytics platform built with Meteor
+Sputlytics is an open-source and self-hosted web analytics platform built with Meteor
 
 ## Setup
 
@@ -22,7 +22,8 @@ Host your own Sputlytics server for **FREE** with [One-Click Deploy](https://her
 ## About
 
 Caio Ribeiro Pereira  
-Lucas N. Munhoz
+Lucas N. Munhoz  
+Diogo Silva Ferreira
 
 ## License
 

@@ -1,8 +1,8 @@
 {
   "name": "sputlytics",
-  "description": "Have your own self-hosted analytics platform. Built with Meteor!",
+  "description": "Sputlytics is a web analytics platform for blogs and websites, like Google Analytics but open-source and self-hosted, with easy setup and extensible codes to customize metrics according to your needs.",
   "repository": "https://github.com/sputlytics/sputlytics",
-  "logo": "https://raw.githubusercontent.com/sputlytics/sputlytics.github.io/master/assets/images/sputlytics-96-logo.png",
+  "logo": "https://sputlytics.com/assets/images/sputlytics-small-logo.svg",
   "keywords": ["meteor", "analytics"],
   "website": "http://sputlytics.com",
   "env": {
