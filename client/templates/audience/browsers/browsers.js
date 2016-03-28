@@ -9,9 +9,9 @@ Template.browsers.helpers({
     return Session.get("isReady")
   },
   browsers() {
-    const visits = Filter.getVisits()
-    const browsers = BrowserService.filter(visits)
-    return totalSort.get() ? total : total.reverse()
+    const reports = Filter.getReports()
+    const browsers = BrowserService.group(reports)
+    return totalSort.get() ? browsers : browsers.reverse()
   },
   totalSortClass() {
     return totalSort.get() ? "asc" : "desc"
