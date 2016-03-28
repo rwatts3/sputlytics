@@ -45,10 +45,11 @@ Template.settings.events({
     $(event.currentTarget).attr("disabled", "disabled")
     const domainId = $(event.currentTarget).data("check-domain")
     Meteor.call("checkDomain", domainId, (err) => {
-      $(event.currentTarget).removeAttr("disabled")
       if (err) {
+        $(event.currentTarget).removeAttr("disabled")
         alert(err.reason)
       } else {
+        $(event.currentTarget).text("VERIFIED!")
         alert("Tracking code working!")
       }
     })
