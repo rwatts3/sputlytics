@@ -9,8 +9,8 @@ Template._visitorsChart.onRendered(() => {
     .valueFormat(d3.format("0d"))
   Tracker.autorun(() => {
     if (Session.get("isReady")) {
-      const visits = Filter.getVisits()
-      const filtered = VisitorsChartService.filter(visits)
+      const reports = Filter.getReports()
+      const filtered = VisitorsChartService.groups(reports)
       const data = []
       if (filtered && filtered.newVisits || filtered.returnedVisits) {
         data.push({label: "New visitors", value: filtered.newVisits, color: "#2ecc71"})
