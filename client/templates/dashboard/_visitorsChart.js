@@ -10,7 +10,7 @@ Template._visitorsChart.onRendered(() => {
   Tracker.autorun(() => {
     if (Session.get("isReady")) {
       const reports = Filter.getReports()
-      const filtered = VisitorsChartService.groups(reports)
+      const filtered = VisitorsChartService.group(reports)
       const data = []
       if (filtered && filtered.newVisits || filtered.returnedVisits) {
         data.push({label: "New visitors", value: filtered.newVisits, color: "#2ecc71"})
