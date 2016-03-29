@@ -1,7 +1,7 @@
 Template._topDevicesType.helpers({
   deviceTypes() {
-    const visits = Filter.getVisits()
-    const devicesTypes = DeviceTypeService.filter(visits).reverse()
-    return _.first(devicesTypes, Filter.MAX)
+    const reports = Filter.getReports()
+    const devicesTypes = DeviceTypeService.group(reports)
+    return _.first(devicesTypes.reverse(), Filter.MAX)
   }
 })
