@@ -1,4 +1,4 @@
-let pageviewsSort = new ReactiveVar(false)
+let pagesSort = new ReactiveVar(false)
 
 Template.content.onCreated(() => {
   Filter.init()
@@ -9,18 +9,18 @@ Template.content.helpers({
     return Session.get("isReady")
   },
   pages() {
-    const visits = Filter.getVisits()
-    const pageviews = ContentService.filter(visits)
-    return pageviewsSort.get() ? pageviews : pageviews.reverse()
+    const reports = Filter.getReports()
+    const pages = ContentService.group(reports)
+    return pagesSort.get() ? pages : pages.reverse()
   },
-  pageviewsSortClass() {
-    return pageviewsSort.get() ? "asc" : "desc"
+  pagesSortClass() {
+    return pagesSort.get() ? "asc" : "desc"
   }
 })
 
 Template.content.events({
   "click a[data-sort-pageviews]": (event) => {
     event.preventDefault()
-    pageviewsSort.set(!pageviewsSort.get())
+    pagesSort.set(!pagesSort.get())
   }
 })

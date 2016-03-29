@@ -1,7 +1,7 @@
 Template._topContents.helpers({
   pages() {
-    const visits = Filter.getVisits()
-    const pageviews = ContentService.filter(visits).reverse()
-    return _.first(pageviews, Filter.MAX)
+    const reports = Filter.getReports()
+    const pages = ContentService.group(reports)
+    return _.first(pages.reverse(), Filter.MAX)
   }
 })
