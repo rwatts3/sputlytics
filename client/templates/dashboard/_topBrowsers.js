@@ -1,7 +1,7 @@
 Template._topBrowsers.helpers({
   browsers() {
-    const visits = Filter.getVisits()
-    const browsers = BrowserService.filter(visits).reverse()
-    return _.first(browsers, Filter.MAX)
+    const reports = Filter.getReports()
+    const browsers = BrowserService.group(reports)
+    return _.first(browsers.reverse(), Filter.MAX)
   }
 })
