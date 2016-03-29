@@ -11,17 +11,17 @@ Filter = {
         if (!Session.get("domainId")) {
           Session.set("domainId", _.first(Meteor.user().domainIds))
         }
-        const visitsSubs = Meteor.subscribe("visits",
+        const reportsSubs = Meteor.subscribe("reports",
           Session.get("domainId"),
           Session.get("startTime"),
           Session.get("endTime")
         )
-        Session.set("isReady", visitsSubs.ready())
+        Session.set("isReady", reportsSubs.ready())
       }
     })
   },
-  getVisits() {
-    return Visits.byDateRange(
+  getReports() {
+    return Reports.byDateRange(
       Session.get("domainId"),
       Session.get("startTime"),
       Session.get("endTime")
