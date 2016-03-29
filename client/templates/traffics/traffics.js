@@ -9,9 +9,8 @@ Template.traffics.helpers({
     return Session.get("isReady")
   },
   sites() {
-    const domain = Domains.findOne(Session.get("domainId"))
-    const visits = Filter.getVisits()
-    const sites = TrafficService.filter(visits)
+    const reports = Filter.getReports()
+    const sites = TrafficService.group(reports)
     return totalSort.get() ? sites : sites.reverse()
   },
   totalSortClass() {
