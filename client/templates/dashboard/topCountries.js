@@ -1,4 +1,4 @@
-Template._topCountries.helpers({
+Template.topCountries.helpers({
   countries() {
     const reports = Filter.getReports()
     const countries = CountryService.group(reports)

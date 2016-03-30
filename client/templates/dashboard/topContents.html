@@ -1,23 +1,23 @@
-<template name="_topOS">
+<template name="topContents">
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h3 class="panel-title">
-        <i class="fa fa-desktop"></i>&nbsp;Top operation systems
+        <i class="fa fa-list-alt"></i>&nbsp;Top site contents
       </h3>
     </div>
     <div class="panel-body">
       <table class="table table-striped table-hover">
         <thead>
           <tr>
-            <th>OS</th>
-            <th>Total</th>
+            <th>Page</th>
+            <th>Pageviews</th>
           </tr>
         </thead>
         <tbody>
-          {{#each operationSystems}}
+          {{#each pages}}
             <tr>
-              <td>{{name}}</td>
-              <td>{{total}}</td>
+              <td><a href="{{pageUrl}}" target="_blank">{{name}}</a></td>
+              <td>{{pageviews}}</td>
             </tr>
           {{else}}
             <tr class="text-center">

@@ -1,4 +1,4 @@
-Template._topBrowsers.helpers({
+Template.topBrowsers.helpers({
   browsers() {
     const reports = Filter.getReports()
     const browsers = BrowserService.group(reports)

@@ -1,4 +1,4 @@
-Template._topContents.helpers({
+Template.topContents.helpers({
   pages() {
     const reports = Filter.getReports()
     const pages = ContentService.group(reports)

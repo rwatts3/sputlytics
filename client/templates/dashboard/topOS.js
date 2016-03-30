@@ -1,4 +1,4 @@
-Template._topOS.helpers({
+Template.topOS.helpers({
   operationSystems() {
     const reports = Filter.getReports()
     const oss = OSService.group(reports)

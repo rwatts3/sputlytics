@@ -1,4 +1,4 @@
-Template._pageviewsChart.onRendered(() => {
+Template.pageviewsChart.onRendered(() => {
   const chart = nv.models.discreteBarChart()
     .x((data) => data.label)
     .y((data) => data.value)

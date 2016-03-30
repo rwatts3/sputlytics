@@ -1,4 +1,4 @@
-Template._btnClipboard.onRendered(function() {
+Template.btnClipboard.onRendered(function() {
 	const selector = `button[data-id='${this.data.id}']`
   const clipboard = new Clipboard(selector)
   clipboard.on('success', (e) => {
@@ -6,7 +6,7 @@ Template._btnClipboard.onRendered(function() {
 	})
 })
 
-Template._btnClipboard.events({
+Template.btnClipboard.events({
   "mouseleave .btn-clipboard": (event) => {
     $(event.currentTarget).tooltip('hide')
   }

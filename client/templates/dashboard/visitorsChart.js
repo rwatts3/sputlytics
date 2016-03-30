@@ -1,4 +1,4 @@
-Template._visitorsChart.onRendered(() => {
+Template.visitorsChart.onRendered(() => {
   const chart = nv.models.pieChart()
     .x((data) => data.label)
     .y((data) => Math.round(data.value))

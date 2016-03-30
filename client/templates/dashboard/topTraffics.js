@@ -1,4 +1,4 @@
-Template._topTraffics.helpers({
+Template.topTraffics.helpers({
   sites() {
     const reports = Filter.getReports()
     const sites = TrafficService.group(reports)
