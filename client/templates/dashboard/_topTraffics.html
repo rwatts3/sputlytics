@@ -16,7 +16,13 @@
         <tbody>
           {{#each sites}}
             <tr>
-              <td>{{name}}</td>
+              <td>
+                {{#if isDirect}}
+                  {{name}}
+                {{else}}
+                  <a href="{{name}}" target="_blank">{{name}}</a>
+                {{/if}}
+              </td>
               <td>{{total}}</td>
             </tr>
           {{else}}

@@ -15,6 +15,10 @@ Template.content.helpers({
   },
   pagesSortClass() {
     return pagesSort.get() ? "asc" : "desc"
+  },
+  pageUrl() {
+    const domain = Domains.findOne(Session.get("domainId"))
+    return `${domain.url.replace(/\/$/, "")}${this.name}`
   }
 })
 
