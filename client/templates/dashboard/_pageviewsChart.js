@@ -11,7 +11,9 @@ Template._pageviewsChart.onRendered(() => {
   Tracker.autorun(() => {
     if (Session.get("isReady")) {
       const reports = Filter.getReports()
-      const pageviews = PageviewsChartService.group(reports)
+      const startTime = Session.get("startTime")
+      const endTime = Session.get("endTime")
+      const pageviews = PageviewsChartService.group(reports, startTime, endTime)
       const data = [{key: "Pageviews per day", values: pageviews}]
       nv.addGraph(() => {
         d3.select("svg#pageviewschart")
