@@ -22,6 +22,13 @@ Template.filter.helpers({
   },
   endDate() {
     return moment(Session.get("endTime")).format("MM/DD/YYYY")
+  },
+  lastSyncTime() {
+    const report = Reports.findOne()
+    if (report && report.createdAt) {
+      return moment(report.createdAt).format("MMMM Do YYYY, HH:mm")
+    }
+    return "never"
   }
 })
 

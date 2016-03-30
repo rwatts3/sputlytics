@@ -11,6 +11,7 @@ Filter = {
         if (!Session.get("domainId")) {
           Session.set("domainId", _.first(Meteor.user().domainIds))
         }
+        Meteor.subscribe("lastReport", Session.get("domainId"))
         const reportsSubs = Meteor.subscribe("reports",
           Session.get("domainId"),
           Session.get("startTime"),
