@@ -2,26 +2,17 @@ Seed = {
   init() {
     if (process.env.NODE_ENV === "development") {
       console.log("Seeding database...")
-      const userId1 = Accounts.createUser({
-        username: "caio",
-        email: "caio@mail.com",
+      const userId = Accounts.createUser({
+        username: "user",
+        email: "user@mail.com",
         password: "123456",
         profile: {
           domain: "https://sputlytics.com"
         }
       })
-      const userId2 = Accounts.createUser({
-        username: "lucas",
-        email: "lucas@mail.com",
-        password: "123456",
-        profile: {
-          domain: "http://blog.sputlytics.com"
-        }
-      })
-      const domainId1 = Meteor.users.findOne(userId1).domainIds[0]
-      const domainId2 = Meteor.users.findOne(userId2).domainIds[0]
+      const domainId = Meteor.users.findOne(userId).domainIds[0]
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/",
         ip: "100.100.88.25",
         rf: null,
@@ -37,7 +28,7 @@ Seed = {
         sc: { w: 1440, h: 900 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/about",
         ip: "100.100.100.99",
         rf: null,
@@ -53,7 +44,7 @@ Seed = {
         sc: { w: 1440, h: 900 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/jobs",
         ip: "100.100.100.99",
         rf: null,
@@ -69,7 +60,7 @@ Seed = {
         sc: { w: 768, h: 1280 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/jobs",
         ip: "100.100.100.99",
         rf: null,
@@ -85,7 +76,7 @@ Seed = {
         sc: { w: 768, h: 1280 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/jobs",
         ip: "100.100.100.99",
         rf: null,
@@ -101,7 +92,7 @@ Seed = {
         sc: { w: 768, h: 1280 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/jobs",
         ip: "100.100.100.99",
         rf: null,
@@ -117,7 +108,7 @@ Seed = {
         sc: { w: 768, h: 1280 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/contacts",
         ip: "100.100.100.99",
         rf: null,
@@ -133,7 +124,7 @@ Seed = {
         sc: { w: 1440, h: 900 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/contacts",
         ip: "100.100.100.99",
         rf: null,
@@ -149,7 +140,7 @@ Seed = {
         sc: { w: 1440, h: 900 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/contacts",
         ip: "98.92.191.200",
         rf: null,
@@ -165,7 +156,7 @@ Seed = {
         sc: { w: 1920, h: 1080 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/contacts",
         ip: "100.100.100.99",
         rf: null,
@@ -181,7 +172,7 @@ Seed = {
         sc: { w: 1440, h: 900 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/contacts",
         ip: "198.98.22.100",
         rf: null,
@@ -197,7 +188,7 @@ Seed = {
         sc: { w: 1920, h: 1080 }
       })
       Visits.insert({
-        dkey: domainId1,
+        dkey: domainId,
         path: "/contacts",
         ip: "198.98.22.100",
         rf: null,
@@ -213,7 +204,7 @@ Seed = {
         sc: { w: 1920, h: 1080 }
       })
       Visits.insert({
-        dkey: domainId2,
+        dkey: domainId,
         path: "/",
         ip: "100.100.200.54",
         rf: null,
@@ -229,7 +220,7 @@ Seed = {
         sc: { w: 1024, h: 768 }
       })
       Visits.insert({
-        dkey: domainId2,
+        dkey: domainId,
         path: "/",
         ip: "100.300.300.53",
         rf: null,
@@ -245,7 +236,7 @@ Seed = {
         sc: { w: 1280, h: 800 }
       })
       Visits.insert({
-        dkey: domainId2,
+        dkey: domainId,
         path: "/post",
         ip: "255.198.172.99",
         rf: null,
@@ -268,6 +259,7 @@ Seed = {
       Meteor.users.remove({})
       Visits.remove({})
       Domains.remove({})
+      Reports.remove({})
     }
   }
 }
