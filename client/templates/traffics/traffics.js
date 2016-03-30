@@ -15,6 +15,9 @@ Template.traffics.helpers({
   },
   totalSortClass() {
     return totalSort.get() ? "asc" : "desc"
+  },
+  isDirect() {
+    return this.name.toLowerCase() === "direct"
   }
 })
 
