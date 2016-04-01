@@ -11,13 +11,9 @@ blaze-html-templates    # Compile .html files into Meteor Blaze views
 session                 # Client-side reactive dictionary for your app
 jquery                  # Helpful client-side library
 tracker                 # Meteor's client-side reactive programming library
-
-standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
-
 meteorhacks:picker
-meteorhacks:npm
 kadira:flow-router
 kadira:blaze-layout
 bootswatch:paper
@@ -26,9 +22,6 @@ useraccounts:core
 accounts-password
 useraccounts:flow-routing
 accounts-base
-
-
-npm-container
 underscore
 momentjs:moment
 rajit:bootstrap3-datepicker
@@ -42,3 +35,5 @@ zenorocha:clipboard
 stylus
 http
 percolate:synced-cron
+standard-minifier-css
+standard-minifier-js

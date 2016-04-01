@@ -1,9 +1,9 @@
-const url = Meteor.npmRequire("url")
-const userAgent = Meteor.npmRequire("user-agent-parser")
-const device = Meteor.npmRequire("user-agent-device-mapper")
-const geoip = Meteor.npmRequire("geoip-lite")
-const cors = Meteor.npmRequire("cors")
-const helmet = Meteor.npmRequire("helmet")
+import url from "url"
+import userAgent from "user-agent-parser"
+import device from "user-agent-device-mapper"
+import geoip from "geoip-lite"
+import cors from "cors"
+import helmet from "helmet"
 
 Picker.middleware(cors())
 Picker.middleware(helmet())
