@@ -1,3 +1,5 @@
+$gray = #3D4459
+$cyan = #00B2D9
 @keyframes loadingAnim {
   0 {
     transform rotate(0deg)
@@ -49,5 +51,31 @@ html, body
   top 0
   left 0
 
-.navbar-brand
-  padding 8px 10px !important
+.navbar-inverse
+  background-color $gray
+  .navbar-brand
+    padding 8px 10px !important
+  .navbar-nav
+    font-size 15px
+    font-weight 600
+    li
+      a
+        color #FFFFFF
+        &:hover 
+          background-color $cyan
+      &.active
+        a 
+          background-color $cyan
+          &:hover 
+            background-color $cyan
+      &.dropdown
+        background-color $gray
+        .dropdown-menu
+          background-color $gray
+          padding 0px 0px
+
+.panel-primary
+  .panel-heading
+    background-color $gray
+    h3
+      font-weight 600
