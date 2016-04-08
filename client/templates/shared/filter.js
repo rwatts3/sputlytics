@@ -1,3 +1,5 @@
+import { Domains } from '../../../imports/api/domains.js'
+
 Template.filter.onRendered(() => {
   const params = {
     endDate: "0d",

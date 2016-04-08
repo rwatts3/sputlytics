@@ -4,6 +4,8 @@ import device from "user-agent-device-mapper"
 import geoip from "geoip-lite"
 import cors from "cors"
 import helmet from "helmet"
+import { Domains } from '../../imports/api/domains.js'
+
 
 Picker.middleware(cors())
 Picker.middleware(helmet())

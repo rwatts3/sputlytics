@@ -1,3 +1,5 @@
+import { Domains } from '../../../imports/api/domains.js'
+
 Template.topContents.helpers({
   pages() {
     const reports = Filter.getReports()

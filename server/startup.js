@@ -1,8 +1,9 @@
+// Startup code
 Meteor.startup(() => {
   console.log("Sputlytics running...")
-  DBIndex.init()
-  SyncedCron.config({collectionTTL: 172800})
+  // Seed.clear();
+  // Seed.init();
+  SyncedCron.config({ collectionTTL: 172800 })
   SyncedCron.start()
-  // Seed.clear()
-  // Seed.init()
 })
+

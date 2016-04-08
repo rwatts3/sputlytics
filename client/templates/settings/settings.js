@@ -1,3 +1,5 @@
+import { Domains } from '../../../imports/api/domains.js'
+
 Template.settings.onCreated(() => {
   Meteor.subscribe("currentUser")
   Meteor.subscribe("domains")
