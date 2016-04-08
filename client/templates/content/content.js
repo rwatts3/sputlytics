@@ -1,3 +1,5 @@
+import { Domains } from '../../../imports/api/domains.js'
+
 let pagesSort = new ReactiveVar(false)
 
 Template.content.onCreated(() => {

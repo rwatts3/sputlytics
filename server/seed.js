@@ -1,3 +1,5 @@
+import { Domains } from '../imports/api/domains.js'
+
 Seed = {
   init() {
     if (process.env.NODE_ENV === "development") {

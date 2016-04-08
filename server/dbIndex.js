@@ -1,3 +1,5 @@
+import { Domains } from '../imports/api/domains.js'
+
 DBIndex = {
   init() {
     Domains._ensureIndex({url: 1})
