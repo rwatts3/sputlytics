@@ -4,6 +4,13 @@ import { check } from 'meteor/check'
 
 export const Domains = new Mongo.Collection("domains")
 
+Domains.attachSchema(new SimpleSchema({
+  url: {
+    type: String,
+    index: 1
+  }
+}))
+
 if (Meteor.isServer) {
   Meteor.methods({
     addDomain: function(domain) {

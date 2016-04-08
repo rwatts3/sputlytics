@@ -40,3 +40,6 @@ standard-minifier-js
 practicalmeteor:mocha
 random
 reywood:publish-composite
+aldeed:schema-index
+aldeed:simple-schema
+aldeed:collection2
