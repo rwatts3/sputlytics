@@ -12,12 +12,11 @@ Sputlytics is an open-source and self-hosted web analytics platform built with M
 
 ## Deployment
 
-### Heroku
-
-Host your own Sputlytics server for **FREE** with [One-Click Deploy](https://heroku.com/deploy?template=https://github.com/sputlytics/sputlytics/tree/master)
+You can deploy quickly using one of cloud platforms
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sputlytics/sputlytics/tree/master)
-
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.svg)](https://azuredeploy.net/)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/sputlytics/sputlytics)
 
 ## About
 
