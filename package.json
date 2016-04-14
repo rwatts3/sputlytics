@@ -12,34 +12,6 @@
   },
   "repository": "git@github.com:sputlytics/sputlytics.git",
   "license": "MIT",
-  "eslintConfig": {
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "eslint-plugin-meteor"
-    ],
-    "extends": [
-      "plugin:meteor/recommended"
-    ],
-    "rules": {
-      "meteor/no-session": "off",
-      "semi": [
-        2,
-        "never"
-      ]
-    },
-    "env": {
-      "meteor": true,
-      "node": true,
-      "browser": true
-    },
-    "globals": {
-      "Meteor": false,
-      "Session": false
-    }
-  },
   "dependencies": {
     "cors": "^2.7.1",
     "countries-list": "^1.1.0",

@@ -1,0 +1,28 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "eslint-plugin-meteor"
+  ],
+  "extends": [
+    "plugin:meteor/recommended"
+  ],
+  "rules": {
+    "meteor/no-session": "off",
+    "semi": [
+      2,
+      "never"
+    ]
+  },
+  "env": {
+    "meteor": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "Meteor": false,
+    "Session": false
+  }
+}
