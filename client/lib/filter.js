@@ -1,3 +1,5 @@
+import { Reports } from '../../imports/api/reports.js'
+
 Filter = {
   MAX: 10,
   init() {

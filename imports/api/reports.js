@@ -1,6 +1,11 @@
-import { Domains } from '../../imports/api/domains.js'
+import { Meteor } from 'meteor/meteor'
+import { Mongo } from 'meteor/mongo'
+import { check } from 'meteor/check'
 
-Reports = new Mongo.Collection("reports")
+import { Domains } from './domains.js'
+import { Visits } from './visits.js'
+
+export const Reports = new Mongo.Collection("reports")
 
 Reports.attachSchema(new SimpleSchema({
   domainId: {

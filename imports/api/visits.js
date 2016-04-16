@@ -1,4 +1,8 @@
-Visits = new Mongo.Collection("visits")
+import { Meteor } from 'meteor/meteor'
+import { Mongo } from 'meteor/mongo'
+import { check } from 'meteor/check'
+
+export const Visits = new Mongo.Collection("visits")
 
 Visits.attachSchema(new SimpleSchema({
 	dkey: {

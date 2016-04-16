@@ -1,3 +1,5 @@
+import { Reports } from '../../imports/api/reports.js'	
+
 SyncedCron.add({
   name: "Processing reports",
   schedule(parser) {

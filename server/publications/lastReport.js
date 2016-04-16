@@ -1,3 +1,5 @@
+import { Reports } from '../../imports/api/reports.js'
+
 Meteor.publish("lastReport", function(domainId) {
   check(domainId, String)
   if (this.userId) {

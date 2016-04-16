@@ -1,3 +1,5 @@
+import { Reports } from '../../imports/api/reports.js'
+
 Meteor.publish("reports", function(domainId, startTime, endTime) {
   check(domainId, String)
   check(startTime, Number)

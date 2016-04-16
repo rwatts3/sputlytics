@@ -1,4 +1,5 @@
 import { Domains } from '../../../imports/api/domains.js'
+import { Reports } from '../../../imports/api/reports.js'
 
 Template.filter.onRendered(() => {
   const params = {

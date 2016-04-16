@@ -1,4 +1,6 @@
 import { Domains } from '../imports/api/domains.js'
+import { Visits } from '../imports/api/visits.js'
+import { Reports } from '../imports/api/reports.js'
 
 Seed = {
   init() {
