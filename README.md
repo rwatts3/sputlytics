@@ -18,7 +18,7 @@ You can deploy quickly using one of cloud platforms
 * Open the browser and access: http://localhost:3000
 * Running Lint: `npm run lint`
 
-# Slack channel
+## Slack channel
 Get an invite at http://slack.sputlytics.com. We want to know you!
 
 ## About
